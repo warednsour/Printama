@@ -311,7 +311,7 @@ class PrinterUtil {
             BluetoothSocket socket = null;
             boolean connected = true;
             try {
-                socket = device.createRfcommSocketToServiceRecord(uuid);
+                socket = device.createRfcommSocketToServiceRecord(UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"));
                 socket.connect();
             } catch (IOException e) {
                 e.printStackTrace();
